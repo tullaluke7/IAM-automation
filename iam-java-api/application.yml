@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+app:
+  jwt:
+    # set in Railway as env var JWT_SECRET; this is just a fallback for local
+    secret: ${JWT_SECRET:super-secret-change-me}
+  cors:
+    # allow your Base44/Lovable/Vercel origin at runtime
+    origin: ${FRONTEND_ORIGIN:*}
